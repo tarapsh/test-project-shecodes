@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        text-align: center;
+        background-color: #233567;
+        color: #fbc1bc;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      h2 {
+        color: white;
+        border: 1px solid #fbc1bc;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        padding: 6px;
+        font-size: 16px;
+        margin-top: 2px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      span {
+        color: thistle;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 20px;
+      }
+      .Exercise {
+        font-weight: normal;
+        line-height: 1.5;
+        font-size: 13px;
+        border: 1px solid #fbc1bc;
+        border-radius: 6px;
+        border-left: 0px;
+        border-right: 0px;
+      }
+      .learnmore {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        font-size: 10px;
+      }
+      .learnmore:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: #ee7c59;
+        color: whitesmoke;
+        font-size: 17px;
+        padding: 20px 20px;
+        border: none;
+        border-radius: 18px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        background-color: rgb(236, 220, 220);
+        color: tomato;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love working out</h1>
+      <em> <h2>Specially at home</h2></em>
+      <img
+        src="https://cdn.dribbble.com/users/814921/screenshots/13933789/media/0370005618895433f93419d2d9cf925f.jpg?compress=1&resize=400x300"
+        width="380"
+      />
+      <p class="Exercise">
+        Exercise is any bodily activity that enhances or maintains physical
+        fitness and overall health and wellness. It is performed for various
+        reasons, to aid growth and improve strength, prevent aging, develop
+        muscles and the cardiovascular system, hone athletic skills, weight loss
+        or maintenance, improve health, or simply for enjoyment. Many
+        individuals choose to exercise outdoors where they can congregate in
+        groups, socialize, and improve well-being as well as mental health. In
+        terms of health benefits, the amount of recommended exercise depends
+        upon the goal, the type of exercise, and the age of the person. Even
+        doing a small amount of exercise is healthier than doing none.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Exercise" class="learnmore"
+        >Learn more on Wikipedia</a
+      >
+      <br />
+      <br />
+      <button>See my favorite workout plans</button>
+      <p>
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/tarapashania?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdLBIhVgAT6esPzlpdvBGXQ%3D%3D"
+          ><span><strong>Tara Pashania</strong></span>
+        </a>
+      </p>
+    </div>
+    <script>
+      function favoritePlans() {
+        let name = prompt("what's your name?");
+        let focus = prompt(
+          "What part of your body do you want to work on the most?"
+        );
+        let email = prompt("What's your email address?");
+        if (name.length > 0 && focus.length > 0 && email.length > 0) {
+          alert(
+            "Thank you " +
+              name +
+              " we will send " +
+              focus +
+              " focused workouts to your email!"
+          );
+        } else {
+          alert("Please don't forget to fill in the question boxes!");
+        }
+      }
+      let favplans = document.querySelector("button");
+      favplans.addEventListener("click", favoritePlans);
+    </script>
+  </body>
+</html>
